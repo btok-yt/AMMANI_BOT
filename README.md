@@ -85,7 +85,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ## Developers
   <div align="center">
     
-  [[![btok-yt](https://github.com/btok-yt.png?size=100)](https://github.com/btok-yt) 
+  [![btok-yt](https://github.com/btok-yt.png?size=100)](https://github.com/btok-yt) 
 
 [btok-yt](https://github.com/btok-yt)
 
