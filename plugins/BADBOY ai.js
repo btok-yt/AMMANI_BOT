@@ -1,8 +1,8 @@
-/* Codded by Phaticusthiccy
-eva artificial intelligence was codded by Phaticusthiccy
-also 90% of thise code is done by Phaticusthiccy
+/* Codded by 𝘽 𝙏𝙊𝙆_𝙀𝙁𝙓_
+eva artificial intelligence was codded by 𝘽 𝙏𝙊𝙆_𝙀𝙁𝙓_
+also 90% of thise code is done by 𝘽 𝙏𝙊𝙆_𝙀𝙁𝙓_
 
-re-coded or modified by afnanplk
+re-coded or modified by 𝘽 𝙏𝙊𝙆_𝙀𝙁𝙓_
 to bring new ai
 */
 
@@ -32,7 +32,7 @@ let wk = conf.WORKTYPE == 'public' ? false : true
 var vtalk_dsc = ''
 var reply_eva = ''
 if (conf.LANG == 'TR') vtalk_dsc = 'Eva sesli sohbetini başlatır.', reply_eva = '*Herhangi Bir Sesli Mesaja Yanıt Verin!*'
-if (conf.LANG == 'EN') vtalk_dsc = 'Starts to badboy voice chat.', reply_eva = '*Reply to Any Voice Message!*'
+if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Ammani voice chat.', reply_eva = '*Reply to Any Voice Message!*'
 if (conf.LANG == 'AZ') vtalk_dsc = 'Eva səsli söhbətinə başlayır.', reply_eva = '*Hər hansı bir səsli mesaja cavab verin!*'
 if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Eva.', reply_eva = '*Responder a qualquer mensagem de voz!*'
 if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
@@ -65,11 +65,11 @@ const convertToWav = file => {
 }
 
 MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('badboy') && conf.TALKING_BADBOY !== 'true') {        
+    if (message.message.startsWith('Ammani') && conf.TALKING_Ammani !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
-        var finm = message.message.replace('badboy', '').replace(' ', '')   
+        var finm = message.message.replace('Ammani', '').replace(' ', '')   
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
         if (ainame !== 'Asena') return;
         var ldet = lngDetector.detect(finm)
@@ -94,7 +94,7 @@ MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
     }
 }));
 MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.TALKING_BADBOY == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+        if (conf.TALKING_Ammani == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -237,50 +237,50 @@ var already_off = ''
 var succ_on = ''
 var succ_off = ''
 if (conf.LANG == 'TR') {
-    fulleva_dsc = 'Tam fonksiyonel badboy özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
-    already_on = 'badboy yapay zekası halihazırda tüm fonksiyonları etkin.'
-    already_off = 'badboy yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
-    succ_on = 'badboy, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
-    succ_off = 'badboy, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
+    fulleva_dsc = 'Tam fonksiyonel Ammani özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
+    already_on = 'Ammani yapay zekası halihazırda tüm fonksiyonları etkin.'
+    already_off = 'Ammani yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
+    succ_on = 'Ammani, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
+    succ_off = 'Ammani, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
 }
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional badboy features. Turn your account into a ai chatbot!'
-    already_on = 'badboy artificial intelligence is already fully functional.'
-    already_off = 'badboy artificial intelligence is currently running semi-functional.'
-    succ_on = 'badboy Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'badboy Set to Semi-Functional! Please wait a bit! ☑️'
+    fulleva_dsc = 'Activates full functional Ammani features. Turn your account into a ai chatbot!'
+    already_on = 'Ammani artificial intelligence is already fully functional.'
+    already_off = 'Ammani artificial intelligence is currently running semi-functional.'
+    succ_on = 'Ammani Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Ammani Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'ML') {
-    fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ badboy സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
-    already_on = 'badboy കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
-    already_off = 'badboy AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
-    succ_on = 'badboy പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
-    succ_off = 'സെമി-ഫങ്ഷണൽ ആയി badboy സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
+    fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Ammani സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
+    already_on = 'Ammani കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
+    already_off = 'Ammani AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
+    succ_on = 'Ammani പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
+    succ_off = 'സെമി-ഫങ്ഷണൽ ആയി Ammani സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-MyPnky.addCommand({ pattern: 'badboy ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.badboy on / off' }, (async (message, match) => {
-    var badboy_status = `${conf.TALKING_BADBOY}`
+MyPnky.addCommand({ pattern: 'Ammani ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.Ammani on / off' }, (async (message, match) => {
+    var Ammani_status = `${conf.TALKING_Ammani}`
     if (match[1] == 'on') {
-        if (badboy_status == 'true') {
+        if (Ammani_status == 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['TALKING_BADBOY']: 'true'
+                    ['TALKING_Ammani']: 'true'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
         }
     }
     else if (match[1] == 'off') {
-        if (badboy_status !== 'true') {
+        if (Ammani_status !== 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_off + '*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['TALKING_BADBOY']: 'false'
+                    ['TALKING_Ammani']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
