@@ -1,5 +1,5 @@
-/* Copyright (C) 2020 Yusuf Usta.
-PINKY V2
+/* Copyright (C) 2020 𝘽 𝙏𝙊𝙆_𝙀𝙁𝙓_.
+AMMANI_BOT V2
 */
 
 // Komutları burada tutacağız.
